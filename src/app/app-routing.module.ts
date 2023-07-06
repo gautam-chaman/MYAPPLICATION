@@ -1,7 +1,36 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
+import { BlanckpageComponent } from './layout/blanckpage/blanckpage.component';
+import { FullpageComponent } from './layout/fullpage/fullpage.component';
 
-const routes: Routes = [];
+const routes: Routes = [
+
+  {path:'',
+children:[
+  {
+    path:'',redirectTo:'auth',pathMatch:'full'
+  },
+  {
+    path:'auth',component:BlanckpageComponent,
+    loadChildren:()=>import('./modules/auth/auth.module').then(m=>m.AuthModule)
+  },
+  {
+    path:'dashboard',component:FullpageComponent,
+    loadChildren:()=>import('./modules/dashboard/dashboard.module').then(m=>m.DashboardModule)
+  }, {
+    path:'product',component:FullpageComponent,
+    loadChildren:()=>import('./modules/product/product.module').then(m=>m.ProductModule)
+  },
+]
+}
+
+  
+
+
+
+
+  
+];
 
 @NgModule({
   imports: [RouterModule.forRoot(routes)],

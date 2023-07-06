@@ -1,0 +1,113 @@
+<section>
+
+    <ul class="nav p-3 bg-primary text-white">
+        <li *ngFor="let b of m" class="nav-item ms-4">
+            {{b}}
+            
+        </li>
+    </ul>
+
+    <ul>
+        <li *ngFor="let a of mylist">{{a}}</li></ul>
+
+
+<select class="form-control">
+    <option *ngFor="let b of m">{{b}}</option>
+</select>
+
+
+
+<div class="p-3">
+
+<span *ngFor="let c of m " class="p-2"> {{c}}
+    <input type="radio" class="form-check-input" name="a">
+
+
+
+</span>
+    <br>
+
+    
+    <input *ngFor="let c of m" value="{{c}}">
+</div>
+
+
+<div class="container-fluid">
+    <div class="row">
+        <div class="col-md-12">
+
+<table class="table table-hover table-bordered">
+
+<thead>
+    <tr>
+        <th>Name</th>
+        <th>Email</th>
+        <th>Mobile</th>
+        <th>Address</th>
+    </tr>
+</thead>
+
+    <tbody>
+        <tr *ngFor="let g of mylist2">
+
+            <td>{{g.name}}</td>
+
+            <td>{{g.email}}</td>
+
+            <td>{{g.Mobile}}</td>
+
+            <td>{{g.address}}</td>
+
+
+            
+        </tr>
+    </tbody>
+</table>
+
+
+        </div>
+ 
+
+    </div>
+<div class="row">
+    <div class="col-md-3">
+
+<select class="form-control">
+    <option *ngFor="let g of mylist2">{{g.name}}</option>
+</select>
+
+    </div>
+
+    <div class="col-md-3">
+        
+<select class="form-control">
+    <option *ngFor="let g of mylist2">{{g.email}}</option>
+</select>
+    </div>
+    <div class="col-md-3">
+        
+<select class="form-control">
+    <option *ngFor="let g of mylist2">{{g.Mobile}}</option>
+</select>
+    </div>
+
+    <div class="col-md-3">
+        
+<select class="form-control">
+    <option *ngFor="let g of mylist2">{{g.address}}</option>
+</select>
+
+
+    </div>
+    <br><br>
+
+    <button type="submit" class="btn btn-primary col-md-2">Submit</button>
+
+
+</div>
+
+
+</div>
+<br><br><br><br>
+</section>
+
